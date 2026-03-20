@@ -15,7 +15,7 @@ document.querySelector('#phone-checkbox')
   })
 
 document.querySelector('button[type="submit"]')
-  //.addEventListener('click', function(event) {
+  .addEventListener('click', function(event) {
     event.preventDefault()
     const firstNameField = document.getElementById('firstName')
     const lastNameField = document.getElementById('lastName')
@@ -31,7 +31,7 @@ document.querySelector('button[type="submit"]')
       return showAndHideErrorMessage()
     }
     if (isPhoneRequired && !phoneField.value) {   //QUEBRAR AQUI
-    //  return showAndHideErrorMessage()
+      return showAndHideErrorMessage()
     }
     if (!emailField.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
      // return showAndHideErrorMessage() 
